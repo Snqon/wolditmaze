@@ -7,7 +7,7 @@ clock = pygame.time.Clock()
 
 display = pygame.display.set_mode((550,700))
 
-geroy = pygame.Rect(0, 0, 45, 45)
+geroy = pygame.Rect(0, 0, 30, 30)
 
 go_right = False
 go_left = False
@@ -21,7 +21,7 @@ labirint_cookiefall = pygame.image.load(img_path + "/labirint_cookiefall.png")
 Paska = pygame.image.load(img_path + "/Paska.png")
 wall2 = pygame.image.load(img_path + "/wall2.png")
 sunduk = pygame.image.load(img_path + "/sunduk.png")
-hero = pygame.transform.scale(pygame.image.load(img_path + "/yellowchelovek.png"), (45,45))
+hero = pygame.transform.scale(pygame.image.load(img_path + "/yellowchelovek.png"), (30,30))
 
 # labirint_cookiefall = 1
 # Paska = 2
@@ -133,13 +133,13 @@ while game:
                 go_down = False
 
     if go_right == True:
-        geroy.x += 5
+        geroy.x += 4
     if go_left == True:
-        geroy.x -= 5
+        geroy.x -= 4
     if go_up == True:
-        geroy.y -= 5
+        geroy.y -= 4
     if go_down == True:
-        geroy.y += 5
+        geroy.y += 4
 
     pygame.display.flip()
     clock.tick(60)
